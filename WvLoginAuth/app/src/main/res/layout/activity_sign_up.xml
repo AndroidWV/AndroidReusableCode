@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+
+        <variable
+            name="listener"
+            type="android.view.View.OnClickListener" />
+
+    </data>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.SignUpActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_24"
+        android:gravity="center_horizontal">
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="@dimen/dp_80"
+            android:layout_height="@dimen/dp_80"
+            android:layout_marginTop="@dimen/dp_40"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_logo"
+            />
+
+        <TextView
+            android:id="@+id/tvSignUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            android:layout_marginTop="@dimen/sp_16"/>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name"
+                style="@style/TextEditTextTheme"
+                android:inputType="textCapSentences"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiLastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/last_name"
+                style="@style/TextEditTextTheme"
+                android:inputType="textCapSentences"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiGender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputDropTheme"
+            android:hint="@string/gender"
+            >
+
+            <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                android:id="@+id/etGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                >
+
+            </com.google.android.material.textfield.MaterialAutoCompleteTextView>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/email"
+                style="@style/TextEditTextTheme"
+                android:inputType="textEmailAddress"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiMobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etMobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/mobile"
+                style="@style/TextEditTextTheme"
+                android:inputType="phone"
+                android:maxLength="10">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            >
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                style="@style/TextEditTextTheme"
+                android:inputType="textPassword">
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiConfirmPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/TextInputTheme"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etConfirmPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/confirm_password"
+                style="@style/TextEditTextTheme"
+                android:inputType="textPassword"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            style="@style/MaterialButtonOutLinedStyle"
+            android:text="@string/sign_up"
+            android:onClick="@{listener::onClick}"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_16"
+            android:gravity="center">
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/design_default_color_primary"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tvOrText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/or"
+                android:paddingLeft="@dimen/dp_16"
+                android:paddingRight="@dimen/dp_16"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/design_default_color_primary"
+                android:layout_weight="1"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16"
+            style="@style/MaterialButtonOutLinedStyle"
+            android:text="@string/login"
+            android:onClick="@{listener::onClick}"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_up_with"
+            style="@style/TextAppearance.MaterialComponents.Subtitle2"
+            android:layout_marginTop="@dimen/dp_16"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/dp_16"
+            android:gravity="center">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvGoogle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MaterialCardButtonTheme">
+                <ImageView
+                    android:id="@+id/ivGoogle"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:src="@drawable/ic_google"
+                    android:padding="@dimen/dp_4"/>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcvFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/MaterialCardButtonTheme">
+                <ImageView
+                    android:id="@+id/ivFacebook"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:src="@drawable/ic_facebook"
+                    android:padding="@dimen/dp_4"/>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+</layout>

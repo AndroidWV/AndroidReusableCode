@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">LoginAuth</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="gender">Gender</string>
+    <string name="email">Email</string>
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="or">Or</string>
+    <string name="sign_up_with">Sign Up with</string>
+    <string name="login">Login</string>
+    <string name="first_name_required">First name required*</string>
+    <string name="last_name_required">Last Name required*</string>
+    <string name="email_is_required">Email is required*</string>
+    <string name="enter_valid_email">Please enter valid email</string>
+    <string name="mobile_number_is_required">Mobile number is required*</string>
+    <string name="valid_mobile_number">Enter valid mobile number</string>
+    <string name="password_is_required">Password is required*</string>
+    <string name="password_minimum_length">Password minimum length 6 required</string>
+    <string name="confirm_password_required">Confirm password required*</string>
+    <string name="confirm_password_not_matched_with">Confirm password not matched with entered password</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="choose">Choose</string>
+    <string name="please_choose_gender">Please choose gender.</string>
+    <string name="login_with">Login with</string>
+    <string name="skip">Skip</string>
+
+    <string-array name="genders">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+</resources>

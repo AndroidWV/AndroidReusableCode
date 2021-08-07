@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">WvProjectStructureApp</string>
+
+
+    <!-- Network Messages Fixed-->
+    <string name="network_conn">Please check network connection!</string>
+    <string name="unable_auth">Unable to authenticate.</string>
+    <string name="client_not_response">Client not responding.</string>
+    <string name="server_not_response">Internal server error !!</string>
+    <string name="something_wrong">Something went wrong.</string>
+    <string name="retry">Retry</string>
+    <string name="no_restaurant">Sorry, none of the restaurants are available to deliver now. Clicks on Order For later/Self Pick-up tabs to place and advance order</string>
+    <string name="no_home_made">Sorry, none of the homemade are available to deliver now. Clicks on Order For later/Self Pick-up tabs to place and advance order</string>
+    <string name="something_wrong_check_network">Something went wrong. Please check your network connectivity.</string>
+    <string name="no_data_found">No data found</string>
+    <string name="are_you_sure_do_you_want_to_logout">Are you sure? do you want to logout?</string>
+    <string name="do_you_want_to_close_the_application">Do you want to close the application?</string>
+
+
+    <string name="home">Home</string>
+    <string name="notification">Notification</string>
+    <string name="profile">Profile</string>
+
+    <string name="name">Name</string>
+    <string name="login">Login</string>
+
+    <string name="mobile">Mobile</string>
+    <string name="password">Password</string>
+    <string name="enter_your_mobile">Enter Your Mobile</string>
+    <string name="enter_your_password">Enter Your Password</string>
+</resources>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/footerLl"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:background="@color/white"
+        android:baselineAligned="false">
+
+        <RelativeLayout
+            android:id="@+id/footerRlHome"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.2">
+            <!-- android:background="@drawable/ripple_effect_circle"-->
+
+            <ImageView
+                android:id="@+id/footerImgHome"
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/home_icon" />
+
+            <TextView
+                android:id="@+id/footerHomeTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/footerImgHome"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:text="@string/home"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/footerRlNotification"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:id="@+id/footerImgNotification"
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/home_icon" />
+
+            <TextView
+                android:id="@+id/footerNotificationTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/footerImgNotification"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:text="@string/notification"
+                android:textSize="12sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/footerRlProfile"
+            android:layout_width="0dp"
+            android:layout_height="52dp"
+            android:layout_gravity="bottom"
+            android:layout_weight="0.2">
+
+            <ImageView
+                android:id="@+id/footerImgProfile"
+                android:layout_width="17dp"
+                android:layout_height="18dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="13dp"
+                android:contentDescription="@null"
+                android:src="@mipmap/home_icon" />
+
+            <TextView
+                android:id="@+id/footerProfileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/footerImgProfile"
+                android:layout_centerHorizontal="true"
+                android:fontFamily="@font/sf_pro_text_semibold"
+                android:text="@string/profile"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</layout>
+
