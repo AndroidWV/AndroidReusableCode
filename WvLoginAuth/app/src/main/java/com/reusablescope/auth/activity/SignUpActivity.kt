@@ -1,6 +1,7 @@
 package com.reusablescope.auth.activity
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -15,6 +16,9 @@ import android.text.Editable
 
 import android.text.TextWatcher
 import android.util.Log
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import com.reusablescope.auth.utils.Constants
 import java.lang.IllegalStateException
 
 
@@ -58,12 +62,30 @@ class SignUpActivity : AppCompatActivity(), View.OnClickListener {
                             getString(R.string.password_is_required),getString(R.string.confirm_password_not_matched_with), true)
             ){
                 Toast.makeText(this, "Success", Toast.LENGTH_SHORT).show()
-            }
-
-            if (view == binding.btnLogin){
+            } else if (view == binding.btnLogin){
                 onBackPressed()
+            }else if (view == binding.mcvGoogle){
+                val intent = Intent(this,GoogleSignInActivity::class.java)
+                activityResultLauncherSocialSignIn.launch(intent)
+            }else if (view == binding.mcvFacebook){
+                val intent = Intent(this,FacebookSignInActivity::class.java)
+                activityResultLauncherSocialSignIn.launch(intent)
             }
 
+    }
+
+    val activityResultLauncherSocialSignIn = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+        if (result.resultCode == Constants.VALUE.SOCIAL_SIGN_IN){
+            val data = result.data
+            if (data!=null && data.extras?.containsKey(Constants.KEY.SOCIAL_TYPE) == true) {
+                val firstName = data.extras?.get(Constants.KEY.FIRST_NAME)
+                val lastName = data.extras?.get(Constants.KEY.LAST_NAME)
+                val email = data.extras?.get(Constants.KEY.EMAIL)
+                val socialId = data.extras?.get(Constants.KEY.SOCIAL_ID)
+                val socialType = data.extras?.get(Constants.KEY.SOCIAL_TYPE)
+                // call method/ api for social login check
+            }
+        }
     }
 
     /*edittext validation watcher class*/

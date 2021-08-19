@@ -16,7 +16,11 @@ import android.text.Editable
 
 import android.text.TextWatcher
 import android.util.Log
+import androidx.activity.result.ActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.reusablescope.auth.databinding.ActivityLoginBinding
+import com.reusablescope.auth.utils.Constants
 import java.lang.IllegalStateException
 
 
@@ -49,8 +53,28 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             } else if (view == binding.btnSignUp){
                 val intent = Intent(this, SignUpActivity::class.java)
                 startActivity(intent)
+            }else if (view == binding.mcvGoogle){
+                val intent = Intent(this,GoogleSignInActivity::class.java)
+                activityResultLauncherSocialSignIn.launch(intent)
+            }else if (view == binding.mcvFacebook){
+                val intent = Intent(this,FacebookSignInActivity::class.java)
+                activityResultLauncherSocialSignIn.launch(intent)
             }
 
+    }
+
+    val activityResultLauncherSocialSignIn = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result: ActivityResult ->
+        if (result.resultCode == Constants.VALUE.SOCIAL_SIGN_IN){
+            val data = result.data
+            if (data!=null && data.extras?.containsKey(Constants.KEY.SOCIAL_TYPE) == true) {
+                val firstName = data.extras?.get(Constants.KEY.FIRST_NAME)
+                val lastName = data.extras?.get(Constants.KEY.LAST_NAME)
+                val email = data.extras?.get(Constants.KEY.EMAIL)
+                val socialId = data.extras?.get(Constants.KEY.SOCIAL_ID)
+                val socialType = data.extras?.get(Constants.KEY.SOCIAL_TYPE)
+                // call method/ api for social login check
+        }
+        }
     }
 
     /*edittext validation watcher class*/

@@ -20,6 +20,9 @@
         </activity>
         <activity android:name=".activity.SignUpActivity" />
         <activity android:name=".activity.ProfileActivity" />
+        <activity android:name=".activity.GoogleSignInActivity"
+            android:screenOrientation="fullSensor"/>
+        <activity android:name=".activity.FacebookSignInActivity" />
     </application>
 
 </manifest>
